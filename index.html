@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sacred Games - OTT Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <input type="checkbox" id="nav-toggle" />
+    <nav>
+        <div>
+            <button>
+                <span class="material-symbols-outlined">live_tv</span>
+            </button>
+        </div>
+        <ul id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tv_shows">TV Shows</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#recently_added">Recently Added</a></li>
+        </ul>
+        <div>
+            <label for="nav-toggle"><span class="material-symbols-outlined">menu</span></label>
+        </div>
+    </nav>
+
+    <main id="main">
+        <div id="series"></div>
+        <div id="series-main-content">
+            <div id="seasons"></div>
+            
+            <div class="episodes-wrapper">
+                <h4>Episodes</h4>
+                <div id="scroll-helper">
+                    <button type="button" id="left-scroll"><span class="material-symbols-outlined">arrow_circle_left</span></button>
+                    <button type="button" id="right-scroll"><span class="material-symbols-outlined">arrow_circle_right</span></button>
+                </div>
+                <div id="episodes"></div>
+            </div>
+        </div>
+        <div class="characters-wrapper">
+            <h4>Characters</h4>
+            <div id="characters"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with &hearts;</p>
+        <a href="https://vaibhav202.github.io" aria-label="My portfolio link">2025 Vaibhav Pancholi</a>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
