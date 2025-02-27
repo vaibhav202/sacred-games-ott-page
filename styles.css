@@ -5,7 +5,7 @@
   --text-color: hsl(0, 0%, 80%);
   --button-color: hsl(360, 80%, 40%);
   --button-text-color: hsl(360, 40%, 80%);
-  --secondary-button-color: hsl(360,0%,20%);
+  --secondary-button-color: hsl(360, 0%, 20%);
   --secondary-button-text-color: hsl(360, 0%, 80%);
   --opaque: rgba(35, 35, 35, 0.8);
 }
@@ -22,7 +22,7 @@
   box-sizing: border-box;
   user-select: none;
   font-family: 'Inter', sans-serif;
-  font-feature-settings:"salt";
+  font-feature-settings: "salt";
   font-variation-settings: "opsz" 32;
   text-decoration: none;
   line-height: 1.5;
@@ -51,20 +51,11 @@ input:checked~nav ul {
   opacity: 1;
 }
 
-input:checked~nav{
+input:checked~nav {
   background-color: var(--opaque);
   background-image: unset;
   -webkit-backdrop-filter: blur(3rem) saturate(150%);
   backdrop-filter: blur(3rem) saturate(150%);
-}
-
-input:checked~nav>div:nth-of-type(2) {
-  background-color: var(--opaque);
-  border-radius: 0.25rem;
-}
-
-input:checked~nav>div:nth-of-type(2)>span {
-  color: var(--bg-color);
 }
 
 nav {
@@ -82,7 +73,6 @@ nav {
 }
 
 nav>div:nth-of-type(1)>button {
-  /* place-self: start; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,7 +166,7 @@ main {
   text-transform: uppercase;
 }
 
-#seasons > p{
+#seasons>p {
   border-radius: 0.25rem;
   background-color: var(--opaque);
   padding: 0.5rem 1rem;
@@ -189,7 +179,6 @@ main {
   flex-direction: column-reverse;
   justify-content: start;
   align-items: center;
-
 }
 
 #series>.series-img-container {
@@ -206,7 +195,6 @@ main {
   justify-content: center;
   align-items: start;
   gap: 1rem;
-  /* padding: 1rem; */
 }
 
 .series-info-container>h1,
@@ -251,7 +239,6 @@ main {
   }
 }
 
-
 #series>picture>img {
   mask: linear-gradient(180deg, var(--bg-color) 70%, transparent);
   border-radius: 0.25rem;
@@ -285,7 +272,8 @@ main {
   transition: scale 0.25s ease, box-shadow 0.25s ease;
 }
 
-.buttons-container>button:nth-of-type(1)>span{
+.buttons-container>button:nth-of-type(1)>span {
+  font-variation-settings: 'FILL' 1;
   color: var(--button-text-color);
   font-size: 2rem;
 }
@@ -295,11 +283,10 @@ main {
   color: var(--secondary-button-text-color);
 }
 
-.buttons-container>button:nth-of-type(2)>span{
+.buttons-container>button:nth-of-type(2)>span {
   color: var(--secondary-button-text-color);
   font-size: 2rem;
 }
-
 
 .buttons-container>button:hover {
   scale: 1.05;
@@ -334,7 +321,7 @@ main {
 }
 
 #scroll-helper>button>span {
-  background-color: transparent;
+  color: var(--text-color);
   font-size: 2rem;
   border-radius: 999px;
   overflow: hidden;
@@ -342,8 +329,7 @@ main {
 }
 
 #scroll-helper>button:hover>span {
-  background-color: var(--text-color);
-  color: var(--bg-color);
+  font-variation-settings: 'FILL' 1;
 }
 
 .episodes-wrapper {
@@ -462,21 +448,50 @@ main {
   box-shadow: 0 0 50px 5px var(--opaque);
 }
 
-footer{
+footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
+  border-top: 2px solid var(--opaque);
 }
 
-footer p{
-  color: var(--opaque);
+footer>p {
+  color: var(--secondary-button-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
 }
 
-footer a{
-  color: var(--opaque);
+footer>p>span.material-symbols-outlined {
+  color: var(--button-color);
+  overflow: clip;
+  animation: pulse 1.5s ease infinite;
+
+}
+
+@keyframes pulse {
+  0% {
+    scale: 1;
+    font-variation-settings: 'FILL' 1;
+  }
+
+  50% {
+    scale: 0.75;
+    font-variation-settings: 'FILL' 0;
+  }
+
+  100% {
+    scale: 1;
+    font-variation-settings: 'FILL' 1;
+  }
+}
+
+footer a {
+  color: var(--text-color);
 }
 
 @media screen and (min-width: 360px) {
@@ -484,7 +499,6 @@ footer a{
     grid-template-columns: 1fr;
   }
 }
-
 
 @media screen and (min-width: 720px) {
   ul {
@@ -506,7 +520,7 @@ footer a{
 }
 
 @media screen and (min-width: 1080px) {
-  nav ul{
+  nav ul {
     background-color: unset;
     -webkit-backdrop-filter: unset;
     backdrop-filter: unset;
